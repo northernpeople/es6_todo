@@ -1,6 +1,8 @@
-export class Todo{
+class Todo{
   constructor(description){
     this.description = description;
     console.log("created: ",this);
   }
 }
+
+export {Todo};
