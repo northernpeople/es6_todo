@@ -5,4 +5,4 @@ class Todo{
   }
 }
 
-export {Todo as Wanker};
+export {Todo};

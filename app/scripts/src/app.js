@@ -1,9 +1,9 @@
 // assembles the app
-import {Wanker as Todo} from "./model/Todo";
+import * as todoModule from "./model/Todo";
 
 class App{
   constructor(){
-    new Todo("first todo argument");
+    new todoModule.Todo("first todo argument");
   }
 }
 
