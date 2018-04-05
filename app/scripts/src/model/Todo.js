@@ -5,5 +5,4 @@ class Todo{
   }
 }
 
-
-new Todo("first todo argument");
+export default Todo;
