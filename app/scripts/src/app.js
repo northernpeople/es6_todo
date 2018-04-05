@@ -1,5 +1,5 @@
 // assembles the app
-import {Todo} from "./model/Todo";
+import {Wanker as Todo} from "./model/Todo";
 
 class App{
   constructor(){
