@@ -1,9 +1,10 @@
 // assembles the app
-import * as todoModule from "./model/Todo";
+import Dodo from "./model/Todo";
+
 
 class App{
   constructor(){
-    new todoModule.Todo("first todo argument");
+    new Dodo("first todo argument");
   }
 }
 
