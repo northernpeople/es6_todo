@@ -2,4 +2,6 @@
 
 import App from "./app";
 
-new App();
+// new App().run();
+
+new App().testRepo();

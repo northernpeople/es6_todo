@@ -6,6 +6,11 @@ export default class TodoController{
     this.repo = repository;
   }
 
+  create(taskDescription){
+    let todo = new Todo(taskDescription);
+    repo.add(todo);
+  }
+
   testRepo(){
     let todo = new Todo("first todo argument");
     let todo2 = new Todo("second todo argument");

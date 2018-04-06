@@ -5,7 +5,6 @@ export default  class Todo{
   }
 }
 
-
 // export, in addition to default
 let someText = "textVariableValue";
 export {someText};
