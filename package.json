@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/main.js",
+    "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/bundle.js",
     "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/main.js"
   },
   "browserify": {
@@ -26,10 +26,10 @@
     "watchify": "^3.11.0"
   },
   "_comments": [
-    "standard npm script: npm start",
-    "custom npm script: npm run dev",
+    "standard npm scripts: npm start",
+    "custom npm scripts: npm run dev",
     "babel transpiles es6 into es5, and uses node.js style modules & require()",
-    "browserify takes node.js modules and converts into IIFE for the browser",
+    "browserify turns node.js modules into IIFE & bundles all js files into one",
     "watchify reruns browserify, which reruns babel, on code changes"
   ]
 }
