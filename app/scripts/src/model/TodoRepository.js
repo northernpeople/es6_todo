@@ -1,7 +1,7 @@
 // Todo store
 import Todo from "./Todo";
 
-class TodoRepository{
+export default class TodoRepository{
   constructor(){
     this.store = [];
   }
@@ -11,7 +11,7 @@ class TodoRepository{
   }
 
   remove(todo){
-    this.store = this.store.filter( td => td.description === todo.description);
+    this.store = this.store.filter( td => td.description !== todo.description);
   }
 
   contains(todo){
@@ -19,4 +19,8 @@ class TodoRepository{
   }
 
   size(){ return this.store.length; }
+
+  showContent(){
+    console.log(this.store);
+  }
 }
