@@ -2,6 +2,6 @@
 
 import App from "./app";
 
-// new App().run();
 
-new App().testRepo();
+window.addEventListener("load",
+  () => (new App().run()));

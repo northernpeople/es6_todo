@@ -2,6 +2,7 @@ export default  class Todo{
   constructor(description){
     this.description = description;
     this.created = new Date();
+    this.done = false;
   }
 }
 

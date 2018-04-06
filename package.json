@@ -8,11 +8,19 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/bundle.js",
-    "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/main.js"
+    "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/bundle.js"
   },
   "browserify": {
     "transform": [
-      ["babelify", {"presets": ["es2015"], "sourceMap": true }]
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "sourceMap": true
+        }
+      ]
     ]
   },
   "author": "",

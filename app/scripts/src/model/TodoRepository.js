@@ -10,8 +10,20 @@ export default class TodoRepository{
     this.store.push(todo);
   }
 
+  getAll(){
+    return this.store.map(e => e);
+  }
+
   remove(todo){
     this.store = this.store.filter( td => td.description !== todo.description);
+  }
+
+  removeByIndex(index){
+    this.store = this.store.filter( (e, i) => i === index);
+  }
+
+  findByIndex(index){
+    return this.store[index];
   }
 
   contains(todo){

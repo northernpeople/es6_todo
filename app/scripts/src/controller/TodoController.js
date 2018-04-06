@@ -8,7 +8,24 @@ export default class TodoController{
 
   create(taskDescription){
     let todo = new Todo(taskDescription);
-    repo.add(todo);
+    this.repo.add(todo);
+  }
+
+  delete(index){
+    this.repo.removeByIndex(index);
+  }
+
+  markAsDone(index){
+    console.log(this.repo);
+    this.repo.findByIndex(index).done = true;
+    this.repo.showContent();
+  }
+
+  getAllString(){
+    let result = "";
+    this.repo.getAll().forEach( (td, index) =>
+        result += `> ${index+1} ) ${td.description} created ${td.created}, done? ${td.done} \n`);
+    return result;
   }
 
   testRepo(){
