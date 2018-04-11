@@ -11,53 +11,11 @@ export default class TodoController{
     this.repo.add(todo);
   }
 
-  delete(index){
-    this.repo.removeByIndex(index);
+  deleteById(id){
+    this.repo.deleteById(id);
   }
 
-  markAsDone(index){
-    console.log(this.repo);
-    this.repo.findByIndex(index).done = true;
-    this.repo.showContent();
-  }
-
-  getAllString(){
-    let result = "";
-    this.repo.getAll().forEach( (td, index) =>
-        result += `> ${index+1} ) ${td.description} created ${td.created}, done? ${td.done} \n`);
-    return result;
-  }
-
-  testRepo(){
-    let todo = new Todo("first todo argument");
-    let todo2 = new Todo("second todo argument");
-    this.repo.add(todo);
-    this.repo.add(todo2);
-
-    console.log("contains? ",this.repo.contains(todo));
-    console.log("contains2? ",this.repo.contains(todo2));
-    console.log("size ", this.repo.size());
-
-    console.log("\nrepo content after adding 2:\n")
-    this.repo.showContent();
-
-    this.repo.remove(todo);
-
-    console.log("\nrepo content after removing first:\n")
-    this.repo.showContent();
-
-
-    console.log("contains? ",this.repo.contains(todo))
-    console.log("size ", this.repo.size());
-
-    this.repo.remove(todo2);
-
-    console.log("\nrepo content after removing second:\n")
-    this.repo.showContent();
-
-    console.log("contains2? ",this.repo.contains(todo2))
-    console.log("size ", this.repo.size());
-
-    this.repo.showContent();
+  getAll(){
+    return this.repo.getAll();
   }
 }

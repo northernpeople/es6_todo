@@ -1,5 +1,6 @@
-export default  class Todo{
+export default class Todo{
   constructor(description){
+    this.id = Math.random()+"_"; // GUID replacement for training
     this.description = description;
     this.created = new Date();
     this.done = false;
